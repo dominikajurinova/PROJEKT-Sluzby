@@ -1,0 +1,283 @@
+*, :after, :before { box-sizing: border-box; }
+/*
+černá #000000
+pozadí stránky #FAFAFA
+šedá #8B8B8B
+primární modrá #407BFF
+bílá #FFFFFF
+světle modrá #407BFF1F
+*/
+
+/* spolecne */
+body {
+	margin: 0;
+    background-color: #FAFAFA;
+}
+
+h1, 
+h2{
+    color: #000000;
+    font-family: 'Montserrat', sans-serif, Medium;
+    font-size: 28px;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color:#407BFF;
+    margin: auto;
+    margin-top: 10px;
+    align-content: center;
+  }
+
+h2{
+    font-size: 16px;
+    margin-top: 60px;
+}
+
+.happy_travels{
+    margin-bottom: 30px;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif, Light;
+    font-size: 16px;  
+    color: #8B8B8B;
+    text-align: center;
+    margin: 0 20px 30px 20px;
+}
+
+.obrazek img{
+	width: 100%;
+}
+
+.obrazek {
+    margin: 60px 75px 40px 75px;
+}
+
+.tlacitka {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.tlacitka a{
+    font-family: 'Montserrat', sans-serif, Regular;
+    font-size: 14px; 
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    display: block;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: #8B8B8B;
+    margin-bottom: 20px;
+}
+
+.tlacitka a:hover{
+    background-color:  #407BFF; 
+}
+
+.dobrodruzstvi a{
+    width: 195px;
+    height: 40px;
+    
+}
+
+.pohoda a{
+    width: 220px;
+    height: 40px;
+    display: inline;
+}
+
+.ramecky_cestovka p,
+.ramecky_delegati p {
+    font-size: 13px;
+    text-align: left;
+}
+
+.mapa,
+.kaktus,
+.letadlo,
+.palma,
+.desnik,
+.karavan{
+    background-color: #FFFFFF;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    margin: 15px 20px 0 20px;
+    border-radius: 10px;
+    box-shadow: #407BFF1F 0 4px 6px;
+}
+
+.ramecky_cestovka img,
+.ramecky_delegati img{
+    padding: 20px 0 20px 20px;
+    margin-right: 30px;
+} 
+
+/* tablet */
+
+@media screen and (min-width: 640px){
+    .ramecky_cestovka,
+    .ramecky_delegati {
+        display: flex;
+        justify-content: space-around;  
+    }
+
+    .ramecky_cestovka p,
+    .ramecky_delegati p {
+        text-align: center;
+    }
+
+    .mapa,
+    .kaktus,
+    .letadlo,
+    .palma,
+    .desnik,
+    .karavan{
+        flex-direction: column;
+        height: 170px;
+        justify-content: center;
+        flex: 0 0 calc((100% - 80px) / 3);
+        margin: 40px 0 0 0;
+        }
+
+
+    .uvod{
+            margin-top: 60px;
+    }
+    .obrazek {
+        max-width: 450px;
+        margin: auto;
+        
+    }
+       
+    .tlacitka{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .dobrodruzstvi a{
+        display: inline;
+    }
+
+    .pohoda{
+        margin-left: 20px;
+    }
+
+}
+
+/* desktop */
+
+@media screen and (min-width: 1100px){
+    body{
+        width: 1040px;
+        margin:auto;
+    }
+    
+    h1,
+    h2{
+        text-align: left;
+    }
+
+    h1::after{
+     margin-left: 0;
+    }
+
+    p{
+    text-align: left;
+    margin-left: 0;
+    }
+
+    .tlacitka{
+        justify-content: flex-start;
+    }
+
+    .uvod{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 60px 80px 80px 80px;
+        
+    }
+
+    .hlavni_text{
+        max-width: 490px;
+    }
+
+    .obrazek{
+        max-width: 490px;
+    }
+
+    .obrazek img{
+        max-width: 425px;
+        margin: auto;
+    }
+
+    .cestovka{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 80px 0 80px;
+    }
+
+    .cestovka p,
+    .delegati p{
+        margin-top: 17px;
+    }
+
+    .sluzby_cestovka,
+    .sluzby_delegati{
+       max-width: 430px; 
+    }
+    
+    .sluzby_cestovka{
+        margin-left: 60px;
+    }
+
+    .sluzby_delegati{
+        margin-right: 60px;
+    }
+
+    .ramecky_cestovka,
+    .ramecky_delegati{
+        max-width: 550px;
+    }
+
+
+    .ramecky_cestovka p,
+    .ramecky_delegati p {
+        padding: 0 15px 40px 15px;
+        margin-right: 0;
+    }
+
+    .ramecky_cestovka img,
+    .ramecky_delegati img{
+        padding: 40px 60px 20px 60px;
+        margin-right: 0;
+    } 
+
+    .delegati{
+        display: flex;
+        justify-content: space-between;
+        margin: 80px 80px 60px 80px;
+    }
+
+    .mapa,
+    .kaktus,
+    .letadlo,
+    .palma,
+    .desnik,
+    .karavan{
+        width: calc((100% - 40px) / 3);
+        height: 190px;
+        }
+}
